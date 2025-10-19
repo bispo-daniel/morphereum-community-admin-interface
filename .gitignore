@@ -29,3 +29,6 @@ dist-ssr
 
 # certificates
 *.pem
+
+# merge file
+*-merge.txt
