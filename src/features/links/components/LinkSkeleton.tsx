@@ -1,32 +1,4 @@
-import { Skeleton } from "@/components/ui/skeleton";
-
-interface SkeletonProps {
-  width: number;
-  height?: number;
-  borderRadius?: number;
-}
-
-const SkeletonButton = ({ width, borderRadius, height }: SkeletonProps) => {
-  return (
-    <Skeleton
-      className="mt-4 rounded-full"
-      style={{
-        width: `${width}px`,
-        borderRadius: `${borderRadius}px`,
-        height: `${height}px`,
-      }}
-    />
-  );
-};
-
-const SkeletonP: React.FC<SkeletonProps> = ({ width }: SkeletonProps) => {
-  return (
-    <Skeleton
-      className="mt-4 h-[10px] rounded-full"
-      style={{ width: `${width}%` }}
-    />
-  );
-};
+import { SkeletonButton, SkeletonP } from "@/components";
 
 const LinkSkeleton = () => {
   return (
