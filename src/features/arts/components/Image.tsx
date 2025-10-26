@@ -166,11 +166,13 @@ const Image = ({
               type="pink"
               placeholder="download"
             />
-            <CustomButton
-              action={handleApprove}
-              type="success"
-              placeholder="aprovar"
-            />
+            {!approved && (
+              <CustomButton
+                action={handleApprove}
+                type="success"
+                placeholder="aprovar"
+              />
+            )}
             <CustomButton
               action={handleRemove}
               type="error"
