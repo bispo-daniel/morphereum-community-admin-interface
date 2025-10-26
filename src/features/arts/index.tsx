@@ -1,6 +1,7 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 
+import env from "@/config";
 import { useToast } from "@/hooks/use-toast";
 
 import { useDeleteArt } from "./api/deleteArt";
@@ -142,7 +143,7 @@ const Arts = () => {
                 ))}
 
               {(isFetching || isFetchingNextPage || isRefetching) &&
-                Array.from({ length: 12 }).map((_, index) => (
+                Array.from({ length: env.VITE_ART_RECORDS_PER_PAGE }).map((_, index) => (
                   <ImageSkeleton height={350} key={index} />
                 ))}
             </div>
